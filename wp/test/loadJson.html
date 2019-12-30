@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Json Load test</title>
+  <script src="../src/jquery-3.4.1.min.js"></script>
+</head>
+<body bgcolor="#222">
+  <script>
+    var data = [];
+    $.getJSON("alcoholInfo.json", function (json) {
+      data = (json.data);
+      s();
+      
+    });
+
+    function s(){
+      console.log("Method 0 - jQuery");
+      console.log(data);
+    }
+
+
+    var r = new XMLHttpRequest();
+    r.open("GET", "alcoholInfo.json", false);
+    r.send(null)
+    var data2 = [];
+    data2 = JSON.parse(r.responseText);
+    console.log("Method 1 - Pure JS");
+    console.log(data2);
+
+
+    console.log("Method 2 - Pure JS function");
+    console.log(loadJSON("alcoholInfo.json")["data"]);
+
+    // FUNCTION
+
+    function loadJSON(path) {
+      var rqu = new XMLHttpRequest();
+      rqu.open("GET", path, false);
+      rqu.send(null);
+      return JSON.parse(rqu.responseText);
+    }
+
+
+    </script>
+</body>
+</html>

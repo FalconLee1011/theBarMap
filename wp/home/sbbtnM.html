@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>SlideBarAnimation</title>
+  <script src="/src/jquery-3.4.1.min.js"></script>
+  <script src="/src/main.js"></script>
+  <script src="script.js"></script>
+
+  <style>
+    /* SIDE BAR */
+    .sideBarItself{
+      transition: 0.8s;
+      background: rgb(53, 53, 53);
+      width: 100%;
+      height: auto;
+      position: absolute;
+      z-index: 100;
+      top: -100px;
+      opacity: 0;
+      visibility: hidden;
+      text-align: center;
+      left: 0;
+    }
+
+    .sideBarItself_ani{
+      visibility: visible;
+      transition-delay: 0.6s;
+      transition: 0.8s;
+      transform: translateY(100px);
+      opacity: 0.8;
+    }
+
+    .sb{
+      top: 15px;
+      position: relative;
+      margin: 0 auto;
+      z-index: 200;
+      transition: 1.2s;
+      width: 35px;
+    }
+
+    .sb:hover{
+      cursor: pointer;
+    }
+
+    .sb .bar{
+      background:#d7d7d7;
+      width: 35px;
+      height: 3px;
+      margin-top: 9px;
+      transition: 1.2s;
+    }
+
+    .sb_ani{
+      transition: 1.2s;
+    }
+
+    .top_ani{
+      transform: rotate(45deg) translateY(8px) translateX(8px);
+    }
+    .center_ani{
+      opacity: 0;
+    }
+    .bottom_ani{
+      transform: rotate(-45deg) translateY(-8px) translateX(8px);
+    }
+
+    .sideItem_head{
+      height: 60px;
+    }
+
+    .sideItem{
+      padding-top: 15px;
+      padding-bottom: 15px;
+      /* padding-left: 12%; */
+      color: #f7f7f7;
+      font-size: 130%;
+    }
+
+    .sideItem:hover{
+      background: #414141;
+      text-shadow: 5px 5px 5px #10101075;
+      cursor: pointer;
+    }
+
+    .sideItem.active{
+      background: #4d4d4d;
+    }
+
+    .sideItem.active:hover{
+      background: #414141;
+    }
+
+    .out{
+      transition: 1s !important;
+      opacity: 0 !important;
+      visibility: hidden;
+    }
+
+    /* SIDE BAR END */
+
+    .btmWm{
+      color: #f7f7f7;
+      font-size: 150%;
+      text-align: center;
+      text-shadow: 2px 2px 2px #101010e0;
+
+      bottom: 35px;
+      right: 45px;
+      position: absolute;
+      z-index: 2;
+    }
+
+    .btmWm .y{
+      padding-top: 10px;
+      font-size: 65%;
+    }
+  </style>
+</head>
+<body bgcolor="#222">
+
+  <!-- <div> -->
+    <div class="sb" onclick="activeSideBar()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  
+    <div class="sideBarItself">
+      <div class="sideItem_head"></div>
+      <div class="sideItem">找酒吧</div>
+      <div class="sideItem">關於酒</div>
+      <div class="sideItem">關於我們</div>
+    </div>
+  <!-- </div> -->
+
+</body>
+</html>

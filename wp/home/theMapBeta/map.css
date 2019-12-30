@@ -1,0 +1,445 @@
+/* Set a size for our map container, the Google Map will take up 100% of this container */
+.body{
+  background-color: rgb(92, 92, 92) !important;
+  transition-delay: 1.2s;
+  transition: 1s;
+}
+#map {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* INFO WINDOW BEGIN */
+.b{
+  text-align: center;
+  position: relative;
+  left:30px;
+  top:-15px;
+  color: white;
+  width: 200px;
+  height: 300px;
+}
+
+.b:hover{
+  cursor: pointer;
+}
+
+.b .infoWindowContent{
+  position: absolute;
+  left: -15%;
+  width: 142%;
+  height: 230px;
+  overflow: overlay;
+  /* background: #0f0;  */
+  border: none;
+}
+/* INFO WINDOW END */
+
+
+.findMe{
+  position: absolute;
+  right: 15px;
+  width: auto;
+  z-index: 100;
+  float: left;
+  top: 5px;
+  text-align: center;
+  border: #02020240 solid 1.5px;
+/*   background-color: #02020250; */
+  padding: 8px 8px;
+  
+}
+.metxt{
+  position: relative;
+  margin: 0 auto;
+  color:rgb(68,113,40);
+  float: left;
+  top: 5.5px;
+  left: 5px;
+  font-size: 120%;
+  text-shadow: -4px 4px 4px #10101020;
+}
+
+.me{
+  position: relative;
+  margin: 0 auto;
+  left: 3.5px;
+  float: left;
+  width:30px;
+}
+
+.findMe:hover{
+  cursor: pointer;
+}
+
+.detail{
+  color:white;
+  transition: 1.2s;
+  background-color: rgb(16, 16, 16);
+  width: 500px;
+  height: 800px;
+  top:0px;
+  position: absolute;
+  z-index: 2;
+  left: -500px;
+  overflow-x:hidden;
+  /* visibility: hidden; */
+  opacity: 0;
+  padding-left: 20px;
+}
+.detail_ani{
+  /* visibility: visible; */
+  opacity: 1;
+  transition-delay: 1.2s;
+  transition: 1s;
+  left: -100px;
+  transform: translateX(100px);
+  transition-timing-function: ease-in-out;
+}
+
+.detail_head{
+  position: relative;
+  top:10px;
+}
+
+.headtxt{
+  text-align:center;
+  font-family: Trebuchet MS;
+  position: relative;
+  top:-40px;
+  left:20px;
+  font-size: 20px;
+}
+.detailpic{
+  position: relative;
+  left:10px;
+  width:100%;
+}
+.x{
+  position: fixed;
+  left:95%;
+  color:white;
+  top:3px;
+  background-color: rgb(16, 16, 16);
+  border:1px blue none;
+  font-size: 20px;
+}
+.x:hover{
+  cursor: pointer;
+}
+
+.level{
+  font-family: Trebuchet MS;
+  position: relative;
+  top:-5px;
+  left:10px;
+  font-size: 20px;
+}
+.star{
+  width:25px;
+}
+.detailmess{
+  padding-top: 8%;
+  border-color: white;
+}
+#opinion{
+  position: absolute;
+  padding-top: -20px;
+  right:20px;
+  background-color: rgb(84, 84, 84);
+  border: none;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: white;
+  padding: 5px 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 100px;
+  transition: all 0.5s;
+}
+#opinion span {
+  position: relative;
+  transition: 0.5s;
+}
+#opinion:hover {
+  background-color: #827133; /* Green */
+  color: white;
+  cursor: pointer;
+}
+#opinion:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#opinion:hover span {
+  padding-right: 25px;
+}
+#opinion span:after {
+  content: '+';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+
+.form{
+  color:white;
+  background-color: rgb(92, 92, 92);
+  width: 130%;
+  height: 1000px;
+  top:0px;
+  left: -210px;
+  position: absolute;
+  overflow:hidden;
+  padding-left: 7%;
+  /* visibility: hidden; */
+}
+
+.al{
+  position: relative;
+  top:10px;
+  left:200px;
+  width:50px;
+}
+
+.fortxt{
+  font-family: Trebuchet MS;
+  position: relative;
+  top:3px;
+  left:30px;
+  font-size: 20px;;
+  text-align: center;
+}
+
+.forstar{
+  position: relative;
+  left:20px;
+  width:200px;
+}
+
+.forstar img{
+  width:30px;
+}
+
+form{
+  position: absolute;
+  left: 9%;
+}
+
+form input:not(#img):not(.optxt):not(.fea):not(#submit){
+  background-color: rgb(206, 206, 206);
+  width:70%;
+  padding: 8px 20px;
+  margin: 8px 0;
+  border: none;
+}
+.feature{
+  position: relative;
+  left:45px;
+  width:320px;
+  overflow: scroll;
+}
+.optxt{
+  position: relative;
+  left:45px;
+  bottom:20px;
+  background-color: rgb(206, 206, 206);
+  height: 250px;
+  width: 340px;
+  margin: 7px 0;
+  border: none;
+  resize: none;
+}
+.output{
+  width: 97px;
+  height: 97px;
+  float: left;
+}
+.upbtn{
+  float: left;
+  width: 95px;
+  height: 90px;
+  background-color: rgb(92, 92, 92);
+  border-style:solid;
+  border-color: white;
+  text-align: center;
+  font-size: 50px;
+  line-height:90px;
+}
+
+.upbtn:hover{
+  cursor: pointer;
+  background-color: rgb(133, 133, 133);
+}
+
+
+#submit{
+  position: absolute;
+  right: -55px;
+  bottom: -50px;
+  background-color: #827133;
+  border: none;
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  color: white;
+  padding: 3px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+}
+
+#submit:hover{
+  cursor: pointer;
+}
+
+.rtn{
+  font-size: 300%;
+  padding-left: 70%;
+  position: relative;
+  height: 40px
+}
+
+.rtn:hover{
+  cursor: pointer;
+}
+
+.gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div{
+  /* we have to use !important because we are overwritng inline styles */
+  background-color: transparent !important;
+  width: auto !important;
+}
+
+/* arrow colour */
+.gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div > div > div
+{   
+  background: -webkit-linear-gradient(left top,rgb(118, 118, 118),rgba(11, 11, 11, 0.584));
+  background: -o-linear-gradient(bottom right,rgb(118, 118, 118),rgba(11, 11, 11, 0.584));
+  background: -moz-linear-gradient(bottom right,rgb(118, 118, 118),rgb(11, 11, 11,0.584));
+  background: linear-gradient(to bottom right,rgb(118, 118, 118),rgb(11, 11, 11,0.584));
+  width:300px;
+}
+
+/* positioning of infowindow */
+.gm-style-iw
+{
+  top: -30px !important;
+  left: 170px !important;
+}
+
+.gm-style .gm-style-iw-t::after{
+  background:linear-gradient(45deg,rgba(255,255,255,0) 50%,rgba(255,255,255,0) 51%,rgba(255,255,255,0) 100%);
+  box-shadow:-2px 2px 2px 0 rgba(255,255,255,0);
+}
+
+
+.gm-style .gm-style-iw-d{
+  overflow: hidden !important;
+}
+
+.flip-container {
+  perspective: 1000px;
+  width: 615px;
+}
+.flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+.front, .back {
+  width: 430px;
+  height: 800px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+/*   padding-left: 20px; */
+}
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  padding-left: 20px;
+}
+.back {
+  transform: rotateY(180deg);
+  /* background-color: #0f0; */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+  
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration:5s;
+}
+
+.bar_dtl{
+  display: block;
+  padding-top: 10px;
+}
+
+.evals{
+
+}
+.eval{
+  
+}
+
+.successSb {
+  background: #3d3d3dde;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: 100;
+  left: 75px;
+  top: 85px;
+  text-align: center;
+
+  transition: 0.2s;
+  opacity: 0;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.successSb_ani {
+  background: #3d3d3dde;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: 100;
+  left: 75px;
+  top: 85px;
+  text-align: center;
+
+  transition: 1s;
+  opacity: 1;
+  transform: rotateY(0deg);
+  backface-visibility: visible;
+}
+
+.successSb span {
+  position: relative;
+  margin: auto;
+  display: block;
+  top: 20%;
+  font-size: 180%;
+}
+
+.successSb .symbol{
+  font-size: 500%;
+}

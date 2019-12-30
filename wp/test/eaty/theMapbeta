@@ -1,0 +1,26 @@
+<?php 
+                  require '../../../vendor/autoload.php';
+
+                  $collection = (new MongoDB\Client("mongodb://localhost:27017"))->testdb->testData;
+                  $result = $collection->find(['name'=>"WuJi"]);
+
+                  foreach ($result as $entry) {
+                    $name=$entry['name'];
+                    $add=$entry['address'];
+                    $phone=$entry['phone'];
+                    echo <<< str
+                    <div class="say">
+                      $name<br>$add<br>$phone
+                      </div>
+str;
+                  }
+
+                  function unicode2html($str){
+                    // Set the locale to something that's UTF-8 capable
+                    setlocale(LC_ALL, 'en_US.UTF-8');
+                    // Convert the codepoints to entities
+                    $str = preg_replace("/u([0-9a-fA-F]{4})/", "&#x\\1;", $str);
+                    // Convert the entities to a UTF-8 string
+                    return iconv("UTF-8", "ISO-8859-1//TRANSLIT", $str);
+                  }
+                  ?>

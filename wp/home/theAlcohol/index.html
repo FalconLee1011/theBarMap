@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./styleV2.css">
+  <link rel="stylesheet" href="../../src/main.css">
+  <script src="../../src/jquery-3.4.1.min.js"></script>
+  <script src="../../src/main.js"></script>
+  <script src="./scriptV2.js"></script>
+  <script type="module" src="./v2.js"></script>
+
+  <title>酒吧・走吧 @ 關於酒</title>
+</head>
+
+<body>
+
+  <video autoplay muted loop class="bgVideo">
+    <source src="./bg.mp4" type="video/mp4">
+  </video>
+
+  <div class="teachHowToReadThisWeirdElement">
+    <div class="teachHowToReadThisWeirdElementInner">
+      <div class="teachHowToReadThisWeirdElementInnerContent">
+        <h1>
+          <!-- How to id this weird thing? -->
+          如何看懂我？
+        </h1>
+
+        <p>
+          <!-- We call it "Alcoholement", if you F12 me already, I think you already know it though.<br>
+                Each Alcoholement stands for a kind of alcohol, you can click them for further information! <br>
+                Also, we have listed legend below. -->
+          如果你已經F12過我們，那你應該已經知道這件事了。我們稱呼他為 "Alcoholement"。<br>
+          每個 Alcoholement 代表著一種酒，你可以點擊它們已得到更多資訊！<br>
+          圖例如下。
+        </p>
+
+        <div class="element-demo">
+          <img src="./alcoholement_legend.png" width="75%" alt="legend">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sideBarItself">
+    <div class="sideItem_head"></div>
+    <a onclick="teleport('../')">
+      <div class="sideItem">Portal</div>
+    </a>
+    <a onclick="teleport('../theMap')">
+      <div class="sideItem">找酒吧</div>
+    </a>
+    <a href="#">
+      <div class="sideItem active">關於酒</div>
+    </a>
+    <a href="#">
+      <div class="sideItem">關於我們</div>
+    </a>
+  </div>
+
+  <div class="introWindow">
+    <div class="introContent">
+      <div class="intro L">
+        <div class="contant">
+          <h1>
+            <span id="alcItTitle">Title</span><br>
+            <span id="alcItTitle_zh">Title_zh</span>
+          </h1>
+          <div class="detailedIntroOfTheAlcohol">
+
+            <div class="pgf">
+              <!-- <img src="./res/whiskey.jpg" width="200px" alt="whiskey"> -->
+              <div class="alcm">
+                <div class="alcoholement wh" id="alcoholement">
+                  <div class="top">
+                    <div class="st" id="st">St</div>
+                    <div class="lim" id="lim">
+                      <div class="u" id="u">100</div>
+                      <div class="l" id="l">0</div>
+                    </div>
+                  </div>
+                  <div class="name" id="alcItTitle_am">Title</div>
+                </div>
+              </div>
+              <p id="inrto">Intro should go here.</p>
+            </div>
+
+            <div class="pic">
+              <img id="imgRpAl" src="" onerror="this.onerror=null; this.src='./res/404.jpg'" alt="Pic goes here.">
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="intro R">
+        <div class="contant">
+          <h1>
+            <span id="alcItTitle_s">Title</span><span> 相關調酒</span>
+          </h1>
+          <div class="relativeCocktails">
+            <ul>
+              <div class="relativeCocktail">
+                <div class="pic">
+                  <img src="./res/404.jpg" alt="">
+                </div>
+                <div class="leftEhhThing">
+                  <h2>Dummy Cocktail</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus sit amet urna eu imperdiet. Etiam felis
+                    diam,
+                    sodales in varius in, molestie vel nunc. Aliquam feugiat risus id ligula maximus, nec finibus tellus vehicula.
+                    Etiam
+                    condimentum, dolor et rhoncus iaculis, purus ante maximus lorem, a tempor metus leo nec nibh. Mauris placerat
+                    eget orci
+                    eu imperdiet. Quisque non mollis dui, sit amet vehicula turpis. Nullam lacinia odio sed volutpat placerat.
+                    Morbi quis
+                    turpis orci. Donec eu consequat lorem. Quisque tempor auctor consectetur. Vivamus sed orci ac dolor feugiat
+                    iaculis vel
+                    in nibh. Quisque at diam blandit, volutpat quam molestie, tincidunt nisi.</p>
+                </div>
+              </div>
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+          </div>
+        </div>
+      </div>
+      <img src="./res/x.png" width="2%" class="clItrWindow" onclick="closeItr()">
+    </div>
+  </div>
+
+
+  <div class="sb" onclick="activeSideBar()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <div class="main_title" style="z-index: 3;">關於酒</div>
+
+  <div class="btmWm h" style="z-index: 3;">
+    <div class="t" onclick="showHelp()">Help?</div>
+  </div>
+
+</body>
+
+</html>
+
+
+
+<!-- 
+僕のWIFU
+⣬⣿⣽⣿⣽⣿⣽⣿⠟⠠⠄⡟⢻⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿
+⣿⣽⣿⣽⣿⣽⣿⣽⣿⡟⢰⠄⢰⢰⠟⣬⠟⣬⡟⣬⣽⠟⣽⠟⣽⡟⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽
+⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⠟⣬⣤⣬⠋⠟⡜⣬⣤⣬⢰⣬⢰⡜⢰⠋⠠⣤⠠⢰⠠⣬⣬⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿
+⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣬⠋⠄⠠⢰⣿⡟⣿⣽⣿⡟⣿⡟⣿⡟⣿⡟⣽⠟⢻⣬⣬⠠⢰⢰⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽
+⣽⣿⣽⣿⣽⣿⣽⣿⡜⣬⢰⠋⢰⠟⠟⣿⢻⣿⠟⣿⠋⠟⡟⣽⠟⣽⣽⣿⠟⣽⠟⣽⠟⣽⣽⣿⠟⣬⠄⢰⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿
+⣿⣽⣿⣽⣿⣬⡜⢰⠟⠟⡟⡟⣿⣽⣽⠟⣽⠟⣿⣬⠠⢰⣿⠟⣽⡟⠠⣬⣿⠟⣽⠟⣽⠠⠋⣽⣿⢻⣿⠋⠠⣬⣿⣽⣿⠟⣿⣽⣿⣽
+⣽⣿⣽⢰⠄⡜⣬⠟⠠⠠⠠⣽⣽⠟⠄⣽⠟⣿⣬⢰⠄⠟⢻⣽⢻⡟⠄⠠⡟⣽⠟⣽⠟⣿⠠⢰⣽⣽⠟⣿⠟⠠⠟⣿⠄⠠⡜⣿⣽⣿
+⣿⠟⠠⠄⠟⣽⣽⢰⠟⢻⣿⡟⣽⠄⣽⣽⣿⠟⠠⣽⡜⣤⣿⠟⣿⠠⠟⣬⢰⣽⣽⠟⣽⡟⣿⠄⣬⣽⣽⠟⣿⣽⠠⠄⢰⠄⠠⣽⣿⣽
+⣽⣿⣽⣿⣽⢻⠄⡜⣽⣿⣽⣿⠄⠋⠟⠟⡜⠠⠄⣿⠋⣤⣽⣽⣽⠠⡜⣬⠄⠟⡟⣿⢻⣿⣽⠟⠄⣿⡟⣽⣽⣽⠄⣬⠄⠋⠄⡜⣽⣿
+⣿⣽⣿⣽⢰⠄⠟⡜⡜⡜⣿⡟⠠⠟⣽⠟⠠⠋⣿⣽⠟⠄⣿⠟⣽⠄⣿⣽⠟⠄⡜⠠⠋⢰⢻⠟⠠⠠⣿⣽⣽⠄⠟⠄⣽⣽⣿⠟⠠⣽
+⣽⣿⣽⢰⠄⠟⠠⠠⠄⣬⣤⠠⢰⣿⣽⣬⣬⣿⣽⣿⠟⠠⣽⣿⠟⠠⣽⣿⣽⢰⡜⣿⠟⣬⠟⣽⠄⠠⢰⣿⠄⣬⠠⠟⣽⣿⡟⢻⠄⣬
+⣿⣽⣬⠄⢰⠄⣽⢰⢰⣬⠟⠄⠟⠋⠠⠄⢰⢻⣿⣽⣿⠄⣿⣽⣿⠄⣿⣽⣿⢻⢰⣽⣿⣽⣿⣽⠠⠟⢰⣬⠠⡟⠠⢰⠟⢰⡜⣤⠋⢰
+⣽⣿⠄⠠⣬⣿⣽⠠⠋⢻⠠⢰⠟⢰⠠⣿⣬⠠⠄⡟⣽⠟⠄⠟⢰⠠⣽⣿⠟⠟⠄⠠⠠⣽⠟⣬⠄⢻⠋⠠⠠⠟⠠⠋⡜⣬⣤⠟⢰⣬
+⣿⠟⣬⣽⣿⣽⣿⠄⡟⠠⠠⢰⠟⠄⣿⣽⣿⠋⠠⠄⣿⣽⠠⠠⠋⠠⣽⠄⠠⣬⣿⠄⠟⢰⣬⠠⠠⢰⡜⠄⣬⠄⠠⠋⠟⠋⣬⡜⣬⢰
+⣽⣿⣽⣿⣽⣿⠟⠠⠠⡜⠠⣬⠄⠟⢰⠠⠠⠟⣽⣿⣽⣿⣽⠠⠄⢰⣽⣿⣬⣤⠠⠠⠠⠟⣬⢰⠠⣬⢰⢰⠄⠟⠄⠟⡜⣬⠋⠟⢰⣬
+⣿⣽⣿⣽⣿⣽⡟⠄⢰⠟⠠⠠⠠⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⠠⠄⣿⣽⣿⣽⣿⣤⠠⣬⠟⠄⡜⠟⣬⣤⢰⠟⢰⡜⠟⠋⣬⡜⡜⢰
+⣽⣿⣽⣿⣽⣿⣽⢰⠠⠟⠄⠠⠄⣿⣽⣽⠟⣽⣽⣿⢻⠟⠟⣽⣽⣿⣽⣽⠟⣿⣽⣽⠄⠟⠋⢰⢰⠠⠠⣤⠠⣬⠠⠟⠋⣬⠋⠟⢰⣬
+⣿⣽⣿⣽⣿⣽⣿⢰⡜⢰⠠⠄⠠⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⢻⣿⣽⣿⡜⠠⠠⢰⠠⡜⠄⠋⠄⢰⠟⠠⣬⠟⠋⣬⡜⣬⢰
+⣽⣿⣽⣿⣽⣿⣽⠠⣬⠋⢰⣬⠄⣬⢰⡟⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣤⠠⠠⠄⠠⠠⣤⠠⢰⠟⣽⠄⠟⠋⣬⠋⠟⢰⠋
+⣿⣽⣿⣽⣿⣽⣬⠄⡟⣤⠠⠄⢰⣽⣿⠋⠋⠠⣬⡜⣽⣽⣿⣽⣿⣽⣿⠟⠟⢰⣬⠄⠟⠄⣬⣽⣿⣽⣿⣽⣿⣤⠠⣬⠟⠋⣬⠋⣬⢰
+⣽⣿⣽⣿⣽⣿⠄⣬⡜⠟⠠⠠⣤⣿⣽⣿⣽⣿⣽⣿⠟⠠⠄⠠⢰⠠⠄⣤⣬⣿⣽⢰⠠⠠⣽⣿⣽⣿⣽⣿⣽⡜⠄⠟⠋⣬⠋⠟⠋⣤
+⣿⣽⣿⣽⣿⠟⠠⡜⠟⡜⡟⠄⡟⣽⣿⣽⣿⣽⣿⣽⡜⠄⠠⠄⡜⠋⠠⢻⠋⣽⣿⠄⠠⠟⣿⣽⣿⣽⣿⣽⣿⢰⢰⡜⠟⠋⣬⠋⠟⠠
+⣽⣿⣽⣿⣽⠠⠠⠟⠋⠟⣬⠠⠟⣽⣬⣿⣽⣿⢻⠠⠄⢰⠄⣬⠄⠠⠠⣽⠄⣿⡟⠠⡜⣿⣽⣿⣽⣿⣽⣿⣽⣬⠄⠟⠋⣬⠋⠟⣬⢰
+⣿⣽⣿⣽⣿⠄⠟⠋⣬⠋⠟⠄⠟⡜⣬⣬⣿⣽⠠⢰⠠⠄⣿⠋⠠⢰⣬⠠⠠⣽⣽⠋⣿⣽⣿⣽⣿⣽⣿⣽⣿⣤⠠⣬⠟⠋⣬⠋⠟⠠
+⣽⣿⣽⣿⢰⠠⣬⣬⠋⠟⣤⠠⣽⠟⣽⠟⣬⠠⢰⣿⠄⡜⠋⢰⣬⣽⠟⠠⠄⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⠟⠄⠟⠋⣬⠋⣬⡜⣬
+⣿⣽⣿⣽⠠⢰⠟⠋⣬⡜⣬⠄⣿⠟⠟⠟⠠⠄⣽⢰⠠⠠⠟⣬⠟⣬⠟⠄⣬⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣬⠠⣬⠟⠋⣬⠋⣬⡜
+⣽⣿⣽⣽⠄⠟⠋⣬⠋⠟⢰⠠⣽⣬⠄⣿⣽⠠⠄⢰⣤⡜⢰⠟⣬⢻⠠⠠⠟⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣽⠄⠟⠋⣬⠋⣬⠋⠟
+⣿⣽⣿⢰⠠⡜⣬⠋⣬⠋⣬⠄⣿⣽⣤⢰⠟⢰⣬⣤⣬⡟⠟⠄⠟⣬⠠⢰⢰⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⠠⠋⣬⠋⣬⣤⣬⡜
+⣽⣿⣽⢰⢰⣬⠋⠟⡜⠟⠋⠠⣽⣿⣽⣬⠠⣿⣽⠟⠄⠠⡟⣿⠄⠋⢰⣿⠠⠟⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⣽⣿⠄⣬⣬⠟⣬⠋⢰⡟
+
+ -->

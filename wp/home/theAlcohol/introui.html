@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styleV2.css">
+  <link rel="stylesheet" href="/src/main.css">
+  <script src="/src/jquery-3.4.1.min.js"></script>
+  <script src="/src/main.js"></script>
+  <script src="./scriptV2.js"></script>
+  <title>酒吧・走吧 @ TEST</title>
+
+</head>
+
+<body bgcolor="#101010">
+  <div class="introWindow ani wh">
+    <div class="introContent">
+      <div class="intro L">
+        <div class="contant">
+          <h1>
+            <span>Whisky aka Whiskey</span><br>
+            <span>威士忌</span>
+          </h1>
+          <div class="detailedIntroOfTheAlcohol">
+
+            <div class="pgf">
+              <!-- <img src="./res/whiskey.jpg" width="200px" alt="whiskey"> -->
+              <div class="alcm">
+                <div class="alcoholement wh">
+                  <div class="top">
+                    <div class="st">Wh</div>
+                    <div class="lim">
+                      <div class="u">68</div>
+                      <div class="l">40</div>
+                    </div>
+                  </div>
+                  <div class="name">Whisky</div>
+                </div>
+              </div>
+              <p>
+                廣義解釋，「威士忌」是所有以穀物為原料所製造出來的蒸餾酒之通稱。雖然在傳統觀念上，許多人都認為威士忌是以大麥為原料製造，但實際上卻不是如此。這樣的情況有點類似白蘭地，雖然許多人都認為只有以葡萄為原料所製造出來的蒸餾酒才叫白蘭地，但事實上，白蘭地這名詞泛指所有以水果為原料所製造出來的蒸餾酒。
+
+                威士忌這名詞本身的定義並不是非常嚴謹，除了只能使用穀物（Cereals/Grains）作為原料這個較為明確的規則外，有時剛蒸餾完畢還處於新酒狀態的威士忌，本身特性其實與其他的中性烈酒（Neutral
+                Spirits，如伏特加、白色蘭姆酒）差異並不大。除了美國的摩閃威士忌（Moonshine whiskey）外,
+                幾乎所有種類的威士忌都需要在橡木桶中陳年一定時間之後才能裝瓶出售，因此可以把陳年這道手續列為製造威士忌酒的必要過程。除此之外，要能在蒸餾的過程之中保留下穀物的原味，以便能和純穀物製造且經過過濾處理的伏特加酒或西洋穀物酒（例如Everclear）區別，是威士忌另一個較為明確的定義性要求。
+              </p>
+            </div>
+
+            <div class="pic">
+              <img src="./res/whiskey.jpg" alt="whiskey">
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="intro R">
+        <div class="contant">
+          <h1>
+            <span>Whisky</span><span> 相關調酒</span>
+          </h1>
+          <div class="relativeCocktails">
+            <ul>
+              <div class="relativeCocktail">
+                <div class="pic">
+                  <img src="./res/404.jpg" alt="">
+                </div>
+                <div class="leftEhhThing">
+                  <h2>Dummy Cocktail</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus sit amet urna eu imperdiet. Etiam felis diam,
+                  sodales in varius in, molestie vel nunc. Aliquam feugiat risus id ligula maximus, nec finibus tellus vehicula. Etiam
+                  condimentum, dolor et rhoncus iaculis, purus ante maximus lorem, a tempor metus leo nec nibh. Mauris placerat eget orci
+                  eu imperdiet. Quisque non mollis dui, sit amet vehicula turpis. Nullam lacinia odio sed volutpat placerat. Morbi quis
+                  turpis orci. Donec eu consequat lorem. Quisque tempor auctor consectetur. Vivamus sed orci ac dolor feugiat iaculis vel
+                  in nibh. Quisque at diam blandit, volutpat quam molestie, tincidunt nisi.</p>
+                </div>
+              </div>
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+            <ul>
+              <img width="100%" src="./res/concept.jpg" alt="">
+            </ul>
+          </div>
+        </div>
+      </div>
+      <img src="./res/x.png" width="2%" style="float: right; position: absolute; right: 0.8%; top: 1.2%" onclick="closeItr()">
+    </div>
+  </div>
+  
+    <!-- <div class="alcoholementSelect">
+      <div class="alcoholementSelectTitle">其他酒</div>
+      <div class="alcoholementSelector"></div>
+    </div> -->
+
+  <div class="sideBarItself">
+    <div class="sideItem_head"></div>
+    <a onclick="teleport('/wp/home')">
+      <div class="sideItem">Portal</div>
+    </a>
+    <a onclick="teleport('/wp/home/theMap')">
+      <div class="sideItem">找酒吧</div>
+    </a>
+    <a href="#">
+      <div class="sideItem active">關於酒</div>
+    </a>
+    <a href="#">
+      <div class="sideItem">關於我們</div>
+    </a>
+  </div>
+
+  <div class="sb" onclick="activeSideBar()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</body>
+
+</html>

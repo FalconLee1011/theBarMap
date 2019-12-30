@@ -1,0 +1,9 @@
+<br>uwu shell 1.0 by WGlhb1RzYW8=<br>
+<br># COMMANDS ARE CASE-SENSITIVE #
+<br>
+<br>cat [file]
+<br>cd [-L|-P] [dir]
+<br>echo [-neE] [arg ...]
+<br>help
+<br>logout
+<br>ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]

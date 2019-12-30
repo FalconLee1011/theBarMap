@@ -1,0 +1,74 @@
+1+1
+db.runoob.insert({x:10})
+db.runoob.find()
+db
+db.test.find()
+show dbs
+db.runoob.find()
+db
+use local
+db
+db.runoob.find()
+use test
+db.runoob.find()
+db.runoob.insert({x:20})
+db.runoob.find()
+db.runoob.insert({x:20,y:30})
+db.runoob.find()
+db.col.update({'x':10},{$set:{'y':'MongoDB'}} )
+db.runoob.find()
+db.col.update({'x':10},{$set:{'y':'MongoDB'}})
+db.runoob.find()
+db.col.update({'x':10},{$set:{'y':1}})
+db.runoob.find()
+db.col.update({'x':10},{$set:{'x':1}})
+db.runoob.find()
+db.runoob.update({'x':10},{$set:{'y':'MongoDB'}})
+db.runoob.find()
+db.runoob.update({'y':'MongoDB'},{$set:{'x':'MongoDB'}})
+db.runoob.find()
+db.runoob.remove({'x':'20'})
+db.runoob.find()
+db.runoob.remove({'x':20})
+db.runoob.find()
+db.runoob.remove()
+db.runoob.find()
+show dbs
+db
+db.bar.findOne()
+db.createCollection("mycoll")
+db.mycoll.findOne()
+db.mycoll.find()
+db.bar.find()
+db
+db.haha.find()
+db.haha.insert({w:1,e:2})
+db.haha.find()
+db.haha.find({w:1})
+db.haha.find({w:1}).e
+db.haha.find({w:1})["w"]
+db.haha.delete({w:1})
+db.haha.remove({w:1})
+db.haha.find()
+local
+db
+show dbs
+use test2
+db
+show table
+show tables
+db.coll.find()
+db.system.indexes.find()
+use test
+show tables
+db.haha.find()
+db.haha.drop()
+show tables
+db.mycoll.drop()
+db.system.indexes.find()
+show tables
+db.runoob.find()
+db.runoob.drop()
+db
+show tables
+db.system.indexes.find()

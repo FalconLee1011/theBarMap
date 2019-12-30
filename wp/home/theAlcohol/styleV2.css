@@ -1,0 +1,392 @@
+*{
+  color: #f7f7f7;
+}
+
+.main_title{
+  margin: 0 auto;
+  position: absolute;
+  top: 2vh;
+  left: 50vh;
+  right: 50vh;
+
+  color: #f7f7f7;
+  font-weight: bold;
+  text-align: center;
+
+  width: 12%;
+  height: auto;
+
+  display: block;
+  font-size: 200%;
+  border-width: 1px;
+  border-style: solid;
+
+  padding: 5px 10px;
+
+  transition: 0.5s linear;
+  -moz-transition: 0.5s linear; /* Firefox */
+  -webkit-transition: 0.5s linear; /* Safari | Chrome */
+}
+
+
+.mainAni.slide{
+  left: 10vh;
+  right: auto;
+}
+
+.bgVideo{
+  position: absolute;
+  z-index: 0;
+  /* filter: opacity(0.5); */
+}
+
+.alcoholement{
+  color: #d7d7dd;
+  font-size: 150%;
+  width: 80px;
+  height: 110px;
+  background: #111;
+  padding: 12px 12px;
+  position: relative;
+
+  transition: 0.6s;
+
+  opacity: 0;
+  animation-name: showEle;
+  /* animation-delay: 0.5s; */
+  animation-fill-mode: both;
+  animation-duration: 0.6s;
+
+  margin: auto;
+}
+
+.alcoholement:hover{
+  transition: 0.6s;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  cursor: pointer;
+}
+
+@keyframes showEle{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* Whiskey */
+.alcoholement.wh, .alcoholement.br{
+  background-color: rgba(193, 68, 0, 0.05);
+  border: #5D280B solid 1.25px;
+}
+/* For Intro Window */
+.introWindow.wh, .introWindow.br{
+  transition-delay: 0s;
+  border: #5D280B solid 1.25px;
+}
+/* ------------------------------------------- */
+
+/* Wine */
+.alcoholement.wi{
+  background-color: rgba(70, 10, 14, 0.05);
+  border: rgb(122, 17, 21) solid 1.25px;
+}
+/* For Intro Window */
+.introWindow.wi{
+  transition-delay: 0s;
+  border: rgb(122, 17, 21) solid 1.25px;
+}
+/* ------------------------------------------- */
+
+/* Gin */ /* Water */
+.alcoholement.gi, .alcoholement.vo, .alcoholement.sk, .alcoholement.lq, .alcoholement.tq{
+  background-color: rgba(255, 255, 255, 0.05);
+  border: rgb(211, 211, 211) solid 1.25px;
+}
+/* For Intro Window */
+.introWindow.gi, .introWindow.vo, .introWindow.sk, .introWindow.lq, .introWindow.tq{
+  transition-delay: 0s;
+  border: rgb(211, 211, 211) solid 1.25px;
+}
+/* ------------------------------------------- */
+
+/* Rum */
+.alcoholement.rm{
+  background-color: rgba(70, 10, 14, 0.05);
+  border: rgb(64, 122, 17) solid 1.25px;
+}
+/* For Intro Window */
+.introWindow.rm{
+  transition-delay: 0s;
+  border: rgb(64, 122, 17) solid 1.25px;
+}
+/* ------------------------------------------- */
+
+
+
+/*     Common Elements     */
+
+.alcoholement .st{
+  float: left;
+  padding-top: 15px;
+  font-size: 150%;
+}
+
+.alcoholement .lim{
+  text-align: right;
+}
+
+.alcoholement .u{
+  font-size: 80%;
+  padding-bottom: 25px;
+}
+
+.alcoholement .l{
+  font-size: 80%;
+}
+
+.alcoholement .name{
+  text-align: center;
+  font-size: 105%;
+  padding-top: 6px;
+}
+
+
+/* Help */
+
+.teachHowToReadThisWeirdElement{
+  color: #f7f7f7;
+  position: absolute; 
+  width: 100%; 
+  top: 15%;
+}
+
+.teachHowToReadThisWeirdElementInner{
+  margin: auto;
+  position: relative;
+  height: 0px;
+  width: 0px;
+  background: #070707f0;
+  z-index: 2;
+  text-align: center;
+  padding: 1% 5%;
+  opacity: 0;
+  /* font-size: 0%; */
+
+  transition: 1s;
+}
+.teachHowToReadThisWeirdElementInnerContent{
+  padding: 10px 10px;
+  position: absolute;
+  top: 47%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.teachHowToReadThisWeirdElementInnerContent.ani{
+  opacity: 1;
+  width: 100%;
+  font-size: 100%;
+  transition: 1s;
+  transition-delay: 0.7s;
+}
+
+.teachHowToReadThisWeirdElementInner.ani{
+  opacity: 1;
+  height: 60vh;
+  width: 45%;
+  /* font-size: 100%; */
+  transition: 1s;
+}
+
+.teachHowToReadThisWeirdElementInner p{
+  font-size: 120%;
+  padding: 2% 2%;
+}
+
+.btmWm .t{
+  padding-top: 10px;
+  font-size: 120%;
+}
+
+.btmWm.h:hover{
+  cursor: pointer;
+}
+
+.element-demo{
+  padding-top: 3%;
+  text-align: center;
+  /* padding-left: 10%; */
+}
+
+/* END HELP */
+
+
+/* INTRO */
+/* .dtlClk{
+  position: absolute;
+}
+
+.dtlClk.ani{
+  
+} */
+
+.introWindow {
+  position: relative;
+  margin: 0 auto;
+  top: 80px;
+  width: 98%;
+  height: 65vh;
+  display: block;
+  background-color: #161616;
+  border: rgb(7, 7, 7) solid 1.25px;
+  opacity: 0;
+  transition: 1s;
+  visibility: hidden;
+  z-index: 3;
+}
+
+.introWindow.ani{
+  transition: 1s;
+  transition-delay: 0.6s ;
+  visibility: visible;
+  opacity: 1;
+}
+
+.introContent {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.intro {
+  height: 100%;
+  /* BELOW ARGS ARE ONLY FOR PROTOTYPING */
+  /* border: rgb(255, 0, 0) solid 1.25px; */
+}
+
+.intro.L {
+  float: left;
+  width: 64%;
+}
+
+.intro.R {
+  float: right;
+  width: 35%;
+}
+
+.L .contant {
+  padding: 0.6% 2%;
+  font-size: 110%;
+}
+
+.R .contant {
+  padding: 0.6% 2%;
+  font-size: 110%;
+}
+
+.detailedIntroOfTheAlcohol {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+
+.pgf {
+  position: relative;
+  float: left;
+  width: 60%;
+  height: 45vh;
+  overflow: scroll;
+}
+
+.pgf p{
+  text-align: justify;
+  font-size: 120%;
+  margin-top: 0px;
+}
+
+.pgf .alcm {
+  float: right;
+  padding: 0 0 1.4% 2%;
+  display: block;
+  font-size: 90%;
+}
+
+/* .contant p {
+  text-align: justify;
+  font-size: 110%;
+  height: 45vh;
+} */
+
+.achm {
+  display: inline-block;
+}
+
+.pic {
+  position: relative;
+  float: right;
+  width: 35%;
+}
+
+.pic img {
+  width: 100%;
+}
+
+.alcoholementSelect {
+  top: 100px;
+  position: relative;
+  margin: 0 auto;
+  width: 98%;
+  height: 20vh;
+  display: block;
+  background-color: #16161600;
+  border: #5D280B solid 1.25px;
+}
+
+.alcoholementSelectTitle {
+  padding: 1% 1%;
+}
+
+.clItrWindow{
+  float: right;
+  position: absolute;
+  right: 0.8%;
+  top: 1.2%;
+}
+
+.clItrWindow:hover{
+  cursor: pointer;
+}
+
+.relativeCocktails{
+  overflow: scroll;
+  height: 50vh;
+}
+
+.relativeCocktails ul{
+  padding-inline-start: 0;
+}
+
+.relativeCocktail{
+  float: left;
+}
+.relativeCocktail .pic{
+  float: left;
+}
+
+.leftEhhThing{
+  position: relative;
+  top: 0;
+  left: 2%;
+}
+.leftEhhThing *{
+  margin-block-start: 0;
+  margin-block-end: 0.2em;
+}
+.leftEhhThing p{
+  margin-block-end: 1em;
+}
+
+
+/* END INTRO */

@@ -1,0 +1,91 @@
+.block, .imgl, .imgr, .bl, .br{
+  top: 0px;
+  transition: 1.2s;
+  text-align: center;
+  display: block;
+  height: 100vh;
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.bl, .br{
+  width: 50%;
+}
+
+.imgl{
+  /* width: 50%; */
+  background-image: url("./res/bg_L.jpg");
+  filter: blur(3.5px) brightness(0.95);
+}
+
+.imgr{
+  /* width: 50%; */
+  background-image: url("./res/bg_R.jpg");
+  filter: blur(3.5px) brightness(0.95);
+}
+
+.htitle{
+  transition: 1s;
+
+  color: #f7f7f7;
+  font-size: 320%;
+  font-weight: bold;
+  text-shadow: 3px 3px 2px #10101075;
+
+  position: absolute;
+  top: 40vh;
+  width: 15%;
+  height: auto;
+
+  border-width: 1px;
+  border-style: solid;
+  padding: 5px 10px;
+  z-index: 2;
+}
+
+.htitle.L{
+  border-color: #101010;
+  left: 20%;
+  backdrop-filter: blur(7px);
+}
+
+.htitle.R{
+  border-color: #f7f7f7;
+  right: 20%;
+  backdrop-filter: blur(7px) brightness(1.2);
+}
+
+/* BELOW IS EXPERIMENTAL EFFECTS */
+
+.block_Ani{
+  transition: 0.6s;
+  width: 70%;
+}
+
+.block_Ani_s{
+  transition: 0.6s;
+  width: 30%;
+}
+
+.htitle_Ani_0{
+  transition: 0.6s;
+  padding: calc(5px + 20px) calc(10px + 20px);
+  font-size: calc(320% + 120%);
+  backdrop-filter: blur(3px) !important;
+  z-index: 100;
+}
+
+.htitle_Ani_1{
+  transition: 0.6s;
+  opacity: 0;
+}
+
+.img_ani{
+  transition: 1.0s;
+  filter: blur(0px);
+}
+

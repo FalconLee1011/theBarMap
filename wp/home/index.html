@@ -1,0 +1,69 @@
+<!-- 
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄░░░░░░░░░
+░░░░░░░░▄▀░░░░░░░░░░░░▄░░░░░░░▀▄░░░░░░░
+░░░░░░░░█░░▄░░░░▄░░░░░░░░░░░░░░█░░░░░░░
+░░░░░░░░█░░░░░░░░░░░░▄█▄▄░░▄░░░█░▄▄▄░░░
+░▄▄▄▄▄░░█░░░░░░▀░░░░▀█░░▀▄░░░░░█▀▀░██░░
+░██▄▀██▄█░░░▄░░░░░░░██░░░░▀▀▀▀▀░░░░██░░
+░░▀██▄▀██░░░░░░░░▀░██▀░░░░░░░░░░░░░▀██░
+░░░░▀████░▀░░░░▄░░░██░░░▄█░░░░▄░▄█░░██░
+░░░░░░░▀█░░░░▄░░░░░██░░░░▄░░░▄░░▄░░░██░
+░░░░░░░▄█▄░░░░░░░░░░░▀▄░░▀▀▀▀▀▀▀▀░░▄▀░░
+░░░░░░█▀▀█████████▀▀▀▀████████████▀░░░░
+░░░░░░████▀░░███▀░░░░░░▀███░░▀██▀░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="sytle.css">
+    <link rel="stylesheet" href="/src/main.css">
+    <script src="/src/jquery-3.4.1.min.js"></script>
+    <script src="/src/main.js"></script>
+    <script src="script.js"></script>
+    <title>酒吧・走吧 @ Portal</title>
+  </head>
+
+  <body>  
+    <div class="block">
+      <div class="bl">
+        <div class="imgl"></div>
+        <a onclick="teleport('./theMap')">
+          <div class="htitle L" onmouseover="moveBlock(event)" onmouseout="moveBlock(event)">
+            找酒吧
+          </div>
+        </a>
+      </div>
+      <div class="br">
+        <div class="imgr"></div>
+        <a onclick="teleport('./theAlcohol')">
+          <div class="htitle R" onmouseover="moveBlock(event)" onmouseout="moveBlock(event)">
+            關於酒
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="sideBarItself">
+      <div class="sideItem_head"></div>
+      <a onclick="teleport('./theMap')"><div class="sideItem">找酒吧</div></a>
+      <a onclick="teleport('./theAlcohol')"><div class="sideItem">關於酒</div></a>
+      <a href="#"><div class="sideItem">關於我們</div></a>
+    </div>
+
+    <div class="sb" onclick="activeSideBar()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <div class="btmWm">
+      <div class="t">酒吧・走吧</div>
+      <div class="y">2019</div>
+    </div>
+
+  </body>
+</html>
