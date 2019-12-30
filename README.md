@@ -12,3 +12,4 @@
 
 ## [The site itself](https://barmap.xtl.tw/)
 ### NOTICE: It's currently beta, server may down anytime.
+### THIS PROJECT IS UNDER GPL LICENSE. [See LICENSE](https://github.com/FalconLee1011/theBarMap/blob/master/LICENSE)
